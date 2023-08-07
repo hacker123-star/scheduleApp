@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheduling Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="header">Scheduling Web App</h1>
+    <div class="schedule-form">
+      <div class="form-row">
+        <label for="title">Event Title:</label>
+        <input type="text" id="title" placeholder="Enter event title">
+      </div>
+      <div class="form-row">
+        <label for="date">Date:</label>
+        <input type="date" id="date">
+      </div>
+      <div class="form-row">
+        <label for="time">Time:</label>
+        <div class="time-input-container">
+          <input type="time" id="time" step="300"> <!-- "step" is in seconds, 300 = 5 minutes -->
+        </div>
+      </div>
+      <button id="addButton">Add</button>
+    </div>
+    <div id="scheduleTableContainer" class="hidden">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="scheduleEntries"></tbody>
+      </table>
+    </div>
+    <div class="calendar-form hidden">
+      <label for="selectedDate">Choose a date:</label>
+      <input type="date" id="selectedDate">
+      <button id="showScheduleButton">Show Schedule</button>
+    </div>
+  </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      &copy; 2023 Speth Corporations. All rights reserved.
+    </footer>
+</div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
